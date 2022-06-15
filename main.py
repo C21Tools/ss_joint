@@ -9,7 +9,7 @@ def main():
     st.markdown('# C21アセン画像結合ツール')
     st.markdown('## 使い方')
     st.markdown('- 結合したいスクリーンショットをまとめてドラッグアンドドロップしてください。パーツツリーとステータスが結合された画像が生成されます。')
-    st.markdown('- スクリーンショットの撮影方法は[こちら]('https://note.com/take_c21/n/nf7fc20d5558e')を参照してください。')
+    st.markdown('- スクリーンショットの撮影方法はNote(https://note.com/take_c21/n/nf7fc20d5558e)を参照してください。')
     st.markdown('- スクリーンショットは画像処理のため、Streamlit cloudのサーバーにいったん送られますが、サーバーに保存されることはなく、ブラウザを閉じると消去されます。')
     uploaded_files = st.file_uploader("↓にスクリーンショットをドラッグアンドドロップ", accept_multiple_files=True)
     if uploaded_files:    
