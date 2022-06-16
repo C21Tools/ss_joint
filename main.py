@@ -6,6 +6,7 @@ from PIL import Image
 
 
 def main():
+    st.title('C21アセン画像結合ツール')
     st.markdown('# C21アセン画像結合ツール')
     st.markdown('## 使い方')
     st.markdown('- 結合したいスクリーンショットをまとめてドラッグアンドドロップしてください。パーツツリーとステータスが結合された画像が生成されます。')
