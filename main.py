@@ -55,11 +55,11 @@ def main():
 
         result_memo = Image.fromarray(result)
         result_memo_draw = ImageDraw.Draw(result_memo)
-        font = ImageFont.truetype(font="./fonts/NotoSansJP-Regular.otf", size=14)
+        font = ImageFont.truetype(font="./fonts/NotoSansJP-Regular.otf", size=12)
         result_memo_draw.text((200,350),memo_text,(0,0,0),font=font)
         if check_datetime:
             dt_now = datetime.datetime.now(ZoneInfo("Asia/Tokyo"))
-            dt_pos = [result_memo.width-140,result_memo.height-20]
+            dt_pos = [result_memo.width-120,result_memo.height-20]
             result_memo_draw.text(dt_pos,dt_now.strftime('%Y/%m/%d %H:%M'),(0,0,0), font= font)
             result_memo = np.array(result_memo)                                                         
         st.image(result_memo,output_format = 'png')
