@@ -4,6 +4,7 @@ import streamlit as st
 import datetime
 from operator import attrgetter
 from PIL import Image,ImageFont,ImageDraw
+from zoneinfo import ZoneInfo
 
 
 def main():
@@ -57,8 +58,7 @@ def main():
         font = ImageFont.truetype(font="./fonts/NotoSansJP-Regular.otf", size=10)
         result_memo_draw.text((200,350),memo_text,(0,0,0),font=font)
         if check_datetime:
-            JST = timezone(timedelta(hours=+9), 'JST')
-            dt_now = datetime.datetime.now(JST)
+            dt_now = datetime.datetime.now(ZoneInfo("Asia/Tokyo"))
             dt_pos = [result_memo.width-170,result_memo.height-20]
             result_memo_draw.text(dt_pos,dt_now.strftime('%Y/%m/%d %H:%M'),(0,0,0), font= font)
             result_memo = np.array(result_memo)                                                         
